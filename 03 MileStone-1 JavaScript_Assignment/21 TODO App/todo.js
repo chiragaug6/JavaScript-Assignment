@@ -1,3 +1,5 @@
+// Create a simple to-do app to add TODO items to the list through an input field and a button.
+
 let addButton = document.getElementById("add-btn");
 let todoInput = document.getElementById("todo-input");
 
