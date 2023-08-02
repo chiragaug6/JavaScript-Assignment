@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sequential List Items</title>
+  </head>
+  <body>
+    <h1>Sequential List Items</h1>
+    <button id="addButton">Add Item</button>
+    <ul id="list"></ul>
+
+    <script>
+      // Pre-existing array of list items
+      const listItemArray = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+      let currentIndex = 0;
+
+      const addButton = document.getElementById("addButton");
+      const list = document.getElementById("list");
+
+      addButton.addEventListener("click", () => {
+        if (currentIndex < listItemArray.length) {
+          const newItem = document.createElement("li");
+          newItem.textContent = listItemArray[currentIndex];
+          list.appendChild(newItem);
+          currentIndex++;
+        } else {
+          alert("All items have been added!");
+        }
+      });
+    </script>
+  </body>
+</html>
